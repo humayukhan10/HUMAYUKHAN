@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main (){
+
+while(1){
+    int n,a;
+
+printf("ENTER A YEAR:");
+scanf("%d",&n);
+
+year(n);
+}
+}
+int year(int a)
+{
+
+    if(a%4==0)
+    {
+        printf("%d THIS IS LEAP YEAR:",a);
+
+    }
+    else{
+        printf("%d THIS IS not LEAP YEAR:",a);
+
+    }
+}
