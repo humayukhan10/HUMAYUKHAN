@@ -1,0 +1,237 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+struct node *first=NULL;
+
+void create(int val)
+{
+    struct node *last;
+    if(first==NULL)
+    {
+        first=(struct node*)malloc (sizeof(struct node));
+        first->data=val;
+        first->next=NULL;
+        last=first;
+    }
+    else
+    {
+        printf("LIST IS ALREADY  CREATED\n");
+
+    }
+}
+void insertfirst(struct node *p,int val)
+{
+    struct node *tmp;
+    if(p==NULL)
+    {
+        printf("\nLIST BANAY PELA");
+         return ;
+    }
+    tmp=(struct node*)malloc(sizeof(struct node));
+    tmp->data=val;
+    tmp->next=first;
+    first=tmp;
+
+}
+void insertlast(struct node *p,int val)
+{
+    struct node *tmp,*last;
+    if(p==NULL)
+    {
+        printf("\nLIST BANAY PELA");
+        return ;
+    }
+    while(p->next !=NULL)
+    {
+        p=p->next;
+    }
+    tmp=(struct node*)malloc(sizeof(struct node));
+    tmp->data=val;
+    p->next=tmp;
+    tmp->next=NULL;
+    tmp=last;
+
+}
+void insertat(struct node *p,int val,int pos)
+{
+ struct node *tmp;
+ int loc=1;
+    if(p==NULL)
+    {
+        printf("List banayla pela\n");
+    }
+
+        while (p->next != NULL && loc < pos)
+    {
+
+        p = p->next;
+
+        loc++;
+    }
+        tmp=(struct node*)malloc(sizeof(struct node));
+        tmp->data=val;
+        tmp->next = p->next;
+        p->next = tmp;
+}
+
+int sum(struct node *p)
+{
+    int s1=0;
+    if(p==NULL)
+    {
+        printf("\nList BANAY PELA\n");
+    }
+
+    while(p!=NULL){
+
+    s1 +=p->data;
+    p=p->next;
+
+    }
+    return s1 ;
+}
+
+void search(struct node *p)
+{
+  if(p==NULL)
+    {
+        printf("\nList BANAY PELA\n");
+    }
+    int num,count=1;
+    printf("WHICH ELMENT YOU SEARCHING:");
+    scanf("%d",&num);
+    while(p!=NULL){
+
+    if(p->data==num)
+    {
+        printf("%YOUR ELMENT AT %d LOCATION",count);
+        return;
+    }
+
+else if(p->data !=num && p==NULL)
+{
+    printf("NOT FOUND");
+}
+else if(p->data!=num)
+{
+    count++;
+}
+p=p->next;
+
+if(p==NULL)
+{
+    printf("NOT FOUND");
+}
+
+
+}
+}
+
+void display(struct node *p)
+{
+ if(p==NULL)
+    {
+        printf("\nLIST BANAY PELA");
+    }
+    while(p!=NULL)
+    {
+        printf("\n\nAdrres of Node=%p Value of Node=%d Address of Next node=%p",p,p->data,p->next);
+        p=p->next;
+    }
+}
+int main (void)
+{
+    int choice=-1,value=-1;
+    int c=0;
+
+    while (choice !=0)
+    {
+
+        printf("\n PRESS 1 FOR CREATE EMPTY LIST");
+        printf("\n PRESS 2 FOR INSERT FIRST LIST");
+        printf("\n PRESS 3 FOR INSERT LAST LIST");
+        printf("\n PRESS 4 FOR INSERT ANY LOC LIST");
+        printf("\n PRESS 5 FOR SUM OF LIST");
+        printf("\n PRESS 6 FOR SEARCH ELEMENTS LIST");
+        printf("\n PRESS 7 FOR DISPLAY LIST");
+        printf("\n PRESS 0 FOR EXIT!");
+
+        printf("\nENTER A CHOICE:");
+        scanf("%d",&choice);
+
+        if(choice==1)
+        {
+            printf("ENTER A VALUE:");
+            scanf("%d",&value);
+
+            create(value);
+        }
+
+        else if (choice==2)
+        {
+            printf("ENTER A VALUE:");
+            scanf("%d",&value);
+
+            insertfirst(first,value);
+        }
+        else if (choice==3)
+        {
+            printf("ENTER A VALUE:");
+            scanf("%d",&value);
+
+            insertlast(first,value);
+        }
+        else if (choice==4)
+        {
+            int pos;
+            printf("ENTER A VALUE:");
+            scanf("%d",&value);
+
+            printf("ENTER A POSITION:");
+            scanf("%d",&pos);
+
+            insertat(first,value,pos);
+        }
+
+        else if (choice==5)
+        {
+            int s2=0;
+            s2=sum(first);
+            printf(" SUM OF LINKED LIST=%d",s2);
+        }
+        else if (choice==6)
+        {
+            search(first);
+        }
+
+        else
+        {
+            display(first);
+        }
+
+    }
+     printf("\nTHANK YOU\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
