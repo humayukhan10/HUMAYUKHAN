@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    th,td{
+
+        border-radius: 20px;
+    }
+</style>
+<body bgcolor="#0056b3">
+    <h1 ALIGN="CENTER" style="background-color: #FF4C4C; text-decoration: underline;">4<sup>th</sup> SEM RESULT</h1>
+    <table align="center" cellspacing="10px" width="75%" border="1px" style="text-align: center;background-color: #F6FB7A;color: #1A3636;">
+      <th style="background-color: #134B70;color:white ;border-radius: 20px;">subject name</th>
+      <th style="background-color: #134B70;color:white;border-radius: 20px;">subject code</th>
+      <th style="background-color: #134B70;color:white;border-radius: 20px;">marks obtained</th>
+      
+     </tr>  
+     <tr>
+     
+     <td> Trolical and sub-tropical fruits</td>
+     <td>FRT 4.4 </td>
+     <td>83</td>
+       
+     </tr>
+     <tr>
+     
+        <td>Plantation crops</td>
+        <td>FRT 4.5 </td>
+        <td>82</td>
+        
+     </tr>
+     <tr>
+     
+        <td>Breeding of fruits and Plantation crops</td>
+        <td>FRT 4.6 </td>
+        <td>82</td>
+        
+        </tr>
+        <tr>
+     
+            <td>Spices and condiments</td>
+            <td>VEG 4.3 </td>
+            <td>85</td>
+            
+            </tr>
+            <tr>
+     
+                <td>Principles of landscape architecture</td>
+                <td>FLA 4.3</td>
+                <td>82</td>
+                
+                </tr>
+                <tr>
+     
+                    <td>Disease of fruit, Plamtation, Medicinal crops</td>
+                    <td>PPT 4.4 </td>
+                    <td>78</td>
+                    
+                    </tr>
+                    <tr>
+     
+                        <td>Insect pest of fruit, Plamtation, Medicinal crops</td>
+                        <td>PPT 4.5 </td>
+                        <td>87</td>
+                        
+                        </tr>
+                        <tr>
+     
+                            <td>Farm power and machinery</td>
+                            <td>NRMH 4.6 </td>
+                            <td>84</td>
+                            
+                            </tr>
+                            <tr>
+     
+                                <td>Soil,water and plant and analysis</td>
+                                <td>NRMH 4.7 </td>
+                                <td>81</td>
+                                
+                                </tr>
+
+    </table>
+    <button style="text-align:center;"> <a href="http://127.0.0.1:5500/day3.html">BACK TO FORM</a></button>
+    
+</body>
+</html>
