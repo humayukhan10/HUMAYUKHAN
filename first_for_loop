@@ -1,0 +1,2 @@
+for el in range(100,0,-1): #(start ,stop,step  (+2))
+    print(el)
