@@ -1,0 +1,7 @@
+list1=[1,2,3,4,5,6,7,8,9,10]
+for i in  list1:
+    if(i==2):
+        continue
+    if(i==9):
+        break
+    print(i)
